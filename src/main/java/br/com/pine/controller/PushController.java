@@ -17,6 +17,10 @@ public class PushController {
 	public String index() {
 		return "index";
 	}
+	@RequestMapping(value = "/index", method=RequestMethod.GET)
+	public String indexs() {
+		return "index";
+	}
 	
 	@RequestMapping(value = "/error", method=RequestMethod.GET)
 	public String error() {
