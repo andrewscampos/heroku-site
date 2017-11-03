@@ -18,6 +18,15 @@ public class PushController {
 		return "index";
 	}
 	
+	@RequestMapping(value = "/error", method=RequestMethod.GET)
+	public String error() {
+		return "index";
+	}
+	@RequestMapping(value = "/error", method=RequestMethod.POST)
+	public String error1() {
+		return "index";
+	}
+	
 	@RequestMapping(value="/sendPush",method=RequestMethod.POST)
 	public void sendPush(@RequestBody @Valid Push push) {
 		System.out.println(push);
