@@ -15,6 +15,10 @@ public class PushController {
 	public String index() {
 		return "index";
 	}
+	@RequestMapping(value = "/index", method=RequestMethod.GET)
+	public String index1() {
+		return "index";
+	}
 		
 	@RequestMapping(value="/activity/save",method=RequestMethod.POST)
 	public void save(@RequestBody Object object) {
