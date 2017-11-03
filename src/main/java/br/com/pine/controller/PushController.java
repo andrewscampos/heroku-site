@@ -13,7 +13,7 @@ import br.com.pine.bean.Push;
 public class PushController {
 
 	
-	@RequestMapping("/")
+	@RequestMapping(value = "/", method=RequestMethod.GET)
 	public String index() {
 		return "index";
 	}
