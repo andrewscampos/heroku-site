@@ -33,7 +33,7 @@ public class LoginController {
 	@RequestMapping(value = "/sales", method=RequestMethod.POST)
 	public @ResponseBody HashMap inde() {
 		HashMap<String, String> map = new HashMap<String,String>();
-		map.put("Id","SUSSA");
+		map.put("status","SUSSA");
 		return map;
 	}
 	
