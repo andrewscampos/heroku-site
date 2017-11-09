@@ -1,22 +1,18 @@
 package br.com.site.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
 
 @Controller
 public class LoginController {
 
-	@Autowired
-	private AuthenticationManager authenticationManager;
+//	@Autowired
+//	private AuthenticationManager authenticationManager;
 	
 	@RequestMapping(value = "/", method=RequestMethod.GET)
 	public String index() {
@@ -28,7 +24,8 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/sales", method=RequestMethod.GET)
-	public void inde() {
+	public @ResponseBody String inde() {
+		return "";
 	}
 	
 	@RequestMapping(value = "/teste", method=RequestMethod.POST)
@@ -37,10 +34,10 @@ public class LoginController {
 		System.out.println(json);
 	}
 	
-	public void mantemUsuarioAutenticado(Usuario usuario) {
-		Authentication auth = new UsernamePasswordAuthenticationToken(new ResourceOwner(usuario), usuario.getSenha());
-		SecurityContextHolder.getContext().setAuthentication(authenticationManager.authenticate(auth));
-	}
+//	public void mantemUsuarioAutenticado(Usuario usuario) {
+//		Authentication auth = new UsernamePasswordAuthenticationToken(new ResourceOwner(usuario), usuario.getSenha());
+//		SecurityContextHolder.getContext().setAuthentication(authenticationManager.authenticate(auth));
+//	}
 	public Usuario donoDosLivros() {
 //        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 //        ResourceOwner donoDosLivros = (ResourceOwner) authentication.getPrincipal();
