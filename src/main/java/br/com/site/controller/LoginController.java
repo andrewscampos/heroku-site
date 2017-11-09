@@ -36,7 +36,11 @@ public class LoginController {
 	@RequestMapping(value = "/teste", method=RequestMethod.POST)
 	public void index1s(@RequestBody Object obj) {
 		String json = new Gson().toJson(obj);
-		System.out.println(json);
+		list.add(json);
+	}
+	@RequestMapping(value = "/listar", method=RequestMethod.POST)
+	public @ResponseBody List<String> index1s() {
+		return list;
 	}
 	
 //	public void mantemUsuarioAutenticado(Usuario usuario) {
