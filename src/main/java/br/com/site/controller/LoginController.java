@@ -1,6 +1,7 @@
 package br.com.site.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,14 +31,17 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/sales", method=RequestMethod.GET)
-	public @ResponseBody String inde() {
-		return "";
+	public @ResponseBody HashMap inde() {
+		HashMap<String, String> map = new HashMap<String,String>();
+		map.put("Id","SUSSA");
+		return map;
 	}
 	
 	@RequestMapping(value = "/teste", method=RequestMethod.POST)
-	public void index1s(@RequestBody Map obj) {
+	public @ResponseBody String index1s(@RequestBody Map obj) {
 		String json = new Gson().toJson(obj);
 		list.add(json);
+		return "";
 	}
 	@RequestMapping(value = "/listar", method=RequestMethod.GET)
 	public @ResponseBody List<String> index1s() {
