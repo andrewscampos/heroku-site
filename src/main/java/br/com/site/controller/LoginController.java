@@ -1,13 +1,14 @@
 package br.com.site.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 
@@ -34,7 +35,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/teste", method=RequestMethod.POST)
-	public void index1s(@RequestBody Usuario obj) {
+	public void index1s(@RequestBody Map obj) {
 		String json = new Gson().toJson(obj);
 		list.add(json);
 	}
