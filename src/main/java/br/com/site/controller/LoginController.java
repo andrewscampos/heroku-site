@@ -34,7 +34,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/teste", method=RequestMethod.POST)
-	public void index1s(@RequestBody Object obj) {
+	public void index1s(@RequestBody Usuario obj) {
 		String json = new Gson().toJson(obj);
 		list.add(json);
 	}
