@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.google.gson.Gson;
 
 @Controller
@@ -13,6 +16,8 @@ public class LoginController {
 
 //	@Autowired
 //	private AuthenticationManager authenticationManager;
+	
+	List<String> list = new ArrayList<>();
 	
 	@RequestMapping(value = "/", method=RequestMethod.GET)
 	public String index() {
