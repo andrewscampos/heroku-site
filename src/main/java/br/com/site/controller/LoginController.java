@@ -38,10 +38,10 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/teste", method=RequestMethod.POST)
-	public @ResponseBody String index1s(@RequestBody Map obj) {
+	public @ResponseBody HashMap index1s(@RequestBody Map obj) {
 		String json = new Gson().toJson(obj);
 		list.add(json);
-		return "";
+		return inde();
 	}
 	@RequestMapping(value = "/listar", method=RequestMethod.GET)
 	public @ResponseBody List<String> index1s() {
