@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
     <head>
             <title>Andrews Balbino Campos</title>
-            <link rel="icon" href="http://static.palmeiras.com.br/content/public/upload/imagem/times/imagem_20_original.png">
-            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>      
+            <link rel="icon" href="http://static.palmeiras.com.br/content/public/upload/imagem/times/imagem_20_original.png" />
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />      
     </head>
     <body>
         <h1>Home</h1>
+         <div sec:authorize="not isAuthenticated()">
+             <a class="btn btn-primary" href="/login">Login</a>
+         </div>
+         <div sec:authorize="isAuthenticated()">
+             <a class="btn btn-danger" href="/logout">Logout</a>
+         </div>
     </body>
 </html>

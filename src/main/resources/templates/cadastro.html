@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+    <head>
+            <title>Andrews Balbino Campos</title>
+            <link rel="icon" href="http://static.palmeiras.com.br/content/public/upload/imagem/times/imagem_20_original.png" />
+            <link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}" />  
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' /> 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="background">
+            <div>
+            <div class="container">
+                
+               <div class="form-login">
+                	<form th:action="@{/usuario/cadastrar}" id="form-cadastro" method="post">
+                    <div class="row-40">
+                      <input type="text" class="text-line width-100" name="nome" placeholder="Name " />
+                    </div>
+                     <div class="row-40">
+                      <input type="email" class="text-line width-100" name="email" placeholder="email@email.com " />
+                    </div>
+                    <div class="row-30">
+                        <input type="password" class="text-line width-100" name="senha" placeholder="Password" />
+                    </div>
+                    
+                    <div class="row-20">
+                        <input type="submit" value="Register" class="btn width-100" />
+                    </div>
+
+					</form>
+                </div>
+            
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
